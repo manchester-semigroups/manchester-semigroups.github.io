@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS TAG - Semigroups - people</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	 <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="ems-style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container text-center">
+            <h1 class="site-title">EMS-TAG: Semigroups Network</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto me-auto">
+<li class="nav-item"><a class="nav-link"  href="index.html">About</a><li>
+<li class="nav-item"><a class="nav-link active" href="people.html">People</a><li>
+<li class="nav-item"><a class="nav-link" href="activities.html">Activities</a><li>
+<li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+<li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Main Content -->
+<main class="container my-5">
+<div class="row">	
+<div class="col-lg-9 mx-auto">
+<p class="lead">
+Members of the network are active researchers in semigroup theory and adjacent topics based at the following universities.</p>
+<p>Note: The site is currently under construction and more details will appear here soon. If you are working in semigroup theory or a closely related area and would like details of your research group to appear here, please <a href="membership.html"> become a member</a>.</p>
+</div>
+</div>
+<div class="row">	
+<div class="col-lg-5 mx-auto">	
+			
+<p class = "p-bord">
+<b>Germany</b><br>
+<a href="https://www.tu.berlin/en/math"  target="_blank">TU Berlin</a> - <a href = "https://www.tu.berlin/en/math/research/workgroups-and-research-areas/discrete-and-algorithmic-mathematics/applied-algebra"  target="_blank">Laura Ciobanu</a></p>
+
+
+<p class = "p-bord">
+<b>Portugal</b><br>
+<a href = "https://www.fct.unl.pt/en/faculty/departaments/department-mathematics" target="_blank">NOVA University of Lisbon</a> - <a href ="https://novamath.fct.unl.pt/user/ajm/"  target="_blank">António Malheiro</a></p>
+
+<p class = "p-bord">
+<b>Serbia</b><br>
+<a href="https://www.pmf.uns.ac.rs/en/research/"  target="_blank">University of Novi Sad</a> - <a href ="https://people.dmi.uns.ac.rs/~dockie/" target="_blank">Igor Dolinka</a></p>
+</div>
+	
+			<div class="col-lg-5 mx-auto">	
+<p class = "p-bord">
+<b>Slovenia</b><br>
+<a href = "https://www.fmf.uni-lj.si/en/research/"  target="_blank">University of Ljubljana</a> - <a href = "https://users.fmf.uni-lj.si/kudryavtseva/"  target="_blank">Ganna Kudryavtseva </a></p>
+
+<p class = "p-bord">
+<b>Spain</b><br>
+<a href = "https://matematicas.unex.es/" target="_blank">Universidad de Extremadura</a> - <a href = "https://matematicas.unex.es/~ojedamc/inves.html" target="_blank">Ignacio Ojeda</a></p>
+
+<p class = "p-bord">
+<b>UK</b><br>
+<a href="https://www.hw.ac.uk/about/our-schools/mathematical-and-computer-sciences/research/mathematical-sciences"  target="_blank">Heriot-Watt</a> - <a href = "https://www.macs.hw.ac.uk/~lc45/"  target="_blank">Laura Ciobanu</a><br><br>
+<a href="https://www.maths.manchester.ac.uk/research/" target="_blank">University of Manchester</a> - <a href ="https://personalpages.manchester.ac.uk/staff/marianne.johnson/" target="_blank">Marianne Johnson</a>, <a href = "https://personalpages.manchester.ac.uk/staff/Mark.Kambites/index.php" target="_blank">Mark Kambites</a>, <a href="https://personalpages.manchester.ac.uk/staff/nora.szakacs/index.html" target="_blank">Nóra Szakács</a><br><br>
+<a href="https://www.york.ac.uk/maths/research/" target="_blank">University of York</a> -  <a href ="https://www-users.york.ac.uk/~varg1/" target="_blank">Victoria Gould</a></p>
+</div>
+</div>	
+</main>
+
+<!-- Bootstrap JS -->
+<script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+	<footer class="site-footer">
+    <div class="container text-center">
+        <p>Page last updated on <span id="lastmod"></span><br>
+            Please email
+            <a href="mailto:marianne.johnson@manchester.ac.uk?subject=Query about EMS-TAG website">Marianne Johnson</a>
+            with any queries regarding this website.
+        </p>
+    </div>
+</footer>
+
+<script>
+var date = new Date(document.lastModified);
+date = formatAsUKDate(date);
+document.getElementById("lastmod").innerHTML = date;
+
+function formatAsUKDate(date) {
+  var day = padWithZero(date.getDate(), 2);
+  var month = padWithZero(date.getMonth()+1, 2);
+  var year = date.getFullYear();
+  var hour = padWithZero(date.getHours(), 2);
+  var minute = padWithZero(date.getMinutes(), 2);
+  if (date.getHours() >= 12) {
+  	timehalf = 'pm';
+  } else {
+  	timehalf = 'am';
+  }
+  
+  
+  return  day + '-' + month + '-' + year + ' at ' + hour + ':' + minute + timehalf + '.';
+}
+
+function padWithZero(str, minLength) {
+  str = String(str);
+  while (str.length < minLength) {
+    str = '0' + str;
+  }
+  return str;
+}
+
+</script>
+
+</body>
+</html>

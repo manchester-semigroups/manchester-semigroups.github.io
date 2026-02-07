@@ -1,0 +1,186 @@
+/* =========================
+   Color Variables
+   ========================= */
+:root {
+    --blue-dark: #0066B3;
+	--blue-light: #008BD2;
+    --white: #fff;
+    --blue-contrast: #00AEEF;
+}
+
+/* =========================
+   Global
+   ========================= */
+body {
+    background-color: var(--white);
+    color: #2b2b2b;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+/* =========================
+   Header
+   ========================= */
+.site-header {
+    position: relative;
+    overflow: hidden;               /* keeps the background tidy */
+    background-color: #008BD2;      /* fallback if image missing */
+    border-bottom: 1px solid #ddd;
+    padding: 1.2rem 0 0.8rem;       /* keeps header height as-is */
+}
+
+
+/* Ensure header content sits above the background */
+.site-header .container {dark
+    position: relative;
+    z-index: 1;
+}
+
+.site-title {
+    font-family: "Source Serif 4", Georgia, serif;
+    letter-spacing: 0.02em;
+}
+
+.site-title .caps {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+.custom-navbar {
+    background-color: var(--blue-dark);
+}
+
+.custom-navbar .nav-link {
+    color: #e0dde6;
+    padding: 0.75rem 1rem;
+    position: relative;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--blue-contrast);
+}
+
+/* Active tab */
+.custom-navbar .nav-link.active {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.custom-navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0.3rem;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+}
+
+/* Toggler */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* =========================
+   Content
+   ========================= */
+
+h2 {
+    color: var(--blue-light);
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 100;              /* thin */
+    line-height: 1.05;             /* tight but readable */
+
+    /* Responsive very-large size:
+       roughly ~5 lines of body text on desktop */
+    font-size: clamp(3.5rem, 8vw, 6rem);
+
+    margin: 2.5rem 0 1.5rem;
+}
+
+
+
+ h3 {
+    font-family: "Source Serif 4", Georgia, serif;
+}
+
+a {
+    color: var(--blue-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus {
+    color: var(--blue-contrast);
+}
+
+.abstract {
+  border: 1px outset black;
+  padding: 10px;
+}
+
+.abstract-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: var(--blue-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Hover / focus */
+.abstract-toggle:hover,
+.abstract-toggle:focus {
+    color: var(--white);
+    background: none;
+    outline: none;
+}
+
+.hline {
+    border: none;
+    border-bottom: 2px solid var(--blue-dark);
+    margin: 2rem 0;
+}
+
+.vcenter {rk
+    display: flex;
+    align-items: center;     /* vertical centering */
+}
+
+p.lead {
+    font-weight: 400;
+}
+
+p.p-bord{border: 2px solid var(--blue-dark); padding: 1em;}
+
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer {
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(90, 81, 104, 0.3);
+    font-size: 0.85rem;
+    color: rgba(90, 81, 104, 0.8);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+

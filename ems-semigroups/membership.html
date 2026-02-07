@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS TAG - Semigroups - membership</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	 <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="ems-style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container text-center">
+            <h1 class="site-title">EMS-TAG: Semigroups Network</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto me-auto">
+<li class="nav-item"><a class="nav-link"  href="index.html">About</a><li>
+<li class="nav-item"><a class="nav-link" href="people.html">People</a><li>
+<li class="nav-item"><a class="nav-link" href="activities.html">Activities</a><li>
+<li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link active" href="membership.html">Membership</a></li>
+<li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+	
+	<div class="row">
+			<div class="col-lg-8 mx-auto">		
+<p class="lead">
+Details on how to become a member and answers to some common queries about membership.</p>
+
+<p class="p-bord">
+<b>Why become a member of the Semigroups Network?</b><br>
+Membership is open to all researchers in semigroup theory: it is free to join the network and members will receive regular newsletters and announcements (concerning upcoming events, activities, and opportunities) via email.</p> 
+
+<p class="p-bord">
+<b>How to join and how to leave</b><br>
+To join, please complete <a href = "https://forms.office.com/e/kxAEmRnnp0" target="_blank">this form</a> for approval.<br>
+Members may choose (at any time) to update their details or leave the network. To do so, please <a href="contact.html">contact us</a>.</p>
+
+
+<p class="p-bord">
+<b>What are the categories of membership?</b><br>
+To help maintain our records, two categories of membership are available: short-term and long-term.<br>
+<br>
+<b>Short-term membership</b> is aimed particularly at postgraduate students, researchers on temporary contracts and visiting researchers. The default length of short-term membership is 5 years, after which time members in this category will be invited to re-join (either as a short-term member or long-term member) or allow their membership to ‘expire’. Those choosing short-term membership can optionally indicate an earlier date for renewal to be considered.<br><br>
+
+<b>Long-term membership</b> is aimed at more established researchers. Members in this category are encouraged to supply links to the pages of any
+local research groups in semigroup theory to which they belong.</p>
+
+<p class="p-bord">
+<b>What information is held about members of the network and how will this be used?</b><br>
+The primary data collected via the membership form is: full name; affiliation; and email address. We use this data to keep members informed of events and opportunities via our mailing list.<br>
+We also ask whether you wish to be a short-term member or a long-term member. Selecting short-term membership allows you to optionally specify a date at which your contact details are likely to change to help keep our records up to date. Selecting long-term membership allows you to optionally include details of the research pages of your department (doing so may help junior researchers looking for PhD supervision and job opportunities).<br>
+</p>
+</div>
+</div>	
+</main>
+
+<!-- Bootstrap JS -->
+<script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+	<footer class="site-footer">
+    <div class="container text-center">
+        <p>Page last updated on <span id="lastmod"></span><br>
+            Please email
+            <a href="mailto:marianne.johnson@manchester.ac.uk?subject=Query about EMS-TAG website">Marianne Johnson</a>
+            with any queries regarding this website.
+        </p>
+    </div>
+</footer>
+
+<script>
+var date = new Date(document.lastModified);
+date = formatAsUKDate(date);
+document.getElementById("lastmod").innerHTML = date;
+
+function formatAsUKDate(date) {
+  var day = padWithZero(date.getDate(), 2);
+  var month = padWithZero(date.getMonth()+1, 2);
+  var year = date.getFullYear();
+  var hour = padWithZero(date.getHours(), 2);
+  var minute = padWithZero(date.getMinutes(), 2);
+  if (date.getHours() >= 12) {
+  	timehalf = 'pm';
+  } else {
+  	timehalf = 'am';
+  }
+  
+  
+  return  day + '-' + month + '-' + year + ' at ' + hour + ':' + minute + timehalf + '.';
+}
+
+function padWithZero(str, minLength) {
+  str = String(str);
+  while (str.length < minLength) {
+    str = '0' + str;
+  }
+  return str;
+}
+
+</script>
+
+</body>
+</html>

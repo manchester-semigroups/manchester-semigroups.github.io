@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS TAG - Semigroups - calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	 <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="ems-style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container text-center">
+            <h1 class="site-title">EMS-TAG: Semigroups Network</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto me-auto">
+<li class="nav-item"><a class="nav-link"  href="index.html">About</a><li>
+<li class="nav-item"><a class="nav-link" href="people.html">People</a><li>
+<li class="nav-item"><a class="nav-link" href="activities.html">Activities</a><li>
+<li class="nav-item"><a class="nav-link active" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+<li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+	
+	<div class="row">	
+			<div class="col-lg-8 mx-auto">	
+			<p class="lead">Links to conferences and workshops with semigroup theoretic content.</p>
+<p>If you are organising an event that features plenary talks from semigroup theorists or welcomes contributed talks/posters/presentations from semigroup theorists, and would like to publicise your event here, then please <a href="contact.html"> contact us</a>.</p>
+
+<p class="p-bord">
+<b>February 2026</b><br>
+6th-8th February: <a href= "https://aaa108.org" target="_blank">AAA108, TU Wien, Austria</a><br>
+</p>
+
+<br>
+
+<p class="p-bord">
+<b>March 2026</b><br>
+23rd-24th March: <a href= "https://automata-uk.github.io/wild26/" target="_blank">Automata in the Wild 2026, University of Liverpool, UK</a><br>
+</p>
+
+<br>
+
+<p class = "p-bord">
+<b>May 2026</b><br>
+18th-20th May: <a href= "https://manchester-semigroups.github.io/NBSAN/next.html" target="_blank">NBSAN 40, University of Manchester, UK</a><br></p>
+
+<br>
+
+<p class = "p-bord">
+<b>June 2026</b><br>
+5th-9th June: <a href= "https://aaa109-sal2026.fmf.uni-lj.si/" target="_blank">AAA109 + Semigroups and Automata in Ljubljana 2026, Slovenia</a><br>
+28th-2nd July: <a href = "https://sites.google.com/fct.unl.pt/tca2026/"  target="_blank">TCA 2026, Guimarães, Portugal</a><br></p>
+
+
+<br>
+<p class = "p-bord">
+<b>July 2026</b><br>
+13th-17th July: <a href= "https://www.irif.fr/en/seminaires/algebraic-aspects-of-symbolic-dynamics-2026/index" target="_blank">Algebraic aspects of symbolic dynamics 2026, University of Porto, Portugal</a><br>
+27th-31st July: <a href="https://iphils.uj.edu.pl/tacl/" target="_blank">TACL2026 (Topology, Algebra and Categories in Logic), Kraków, Poland</a>
+<br></p>
+
+<br>
+<p class = "p-bord">
+<b>August 2026</b><br>
+24th-28th August: <a href= "https://imns2026.org/en" target="_blank">International Meeting on Numerical Semigroups, Akdeniz University, Antalya, Turkey</a><br></p>
+
+<br>
+<p class = "p-bord">
+<b>September 2026</b><br>
+14th-18th September: <a href="https://manchester-semigroups.github.io/icsa/" target="_blank">International Conference on Semigroups and Applications, University of Manchester, UK</a><br></p>
+</div>
+</div>
+</main>
+
+<!-- Bootstrap JS -->
+<script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+	<footer class="site-footer">
+    <div class="container text-center">
+        <p>Page last updated on <span id="lastmod"></span><br>
+            Please email
+            <a href="mailto:marianne.johnson@manchester.ac.uk?subject=Query about EMS-TAG website">Marianne Johnson</a>
+            with any queries regarding this website.
+        </p>
+    </div>
+</footer>
+
+<script>
+var date = new Date(document.lastModified);
+date = formatAsUKDate(date);
+document.getElementById("lastmod").innerHTML = date;
+
+function formatAsUKDate(date) {
+  var day = padWithZero(date.getDate(), 2);
+  var month = padWithZero(date.getMonth()+1, 2);
+  var year = date.getFullYear();
+  var hour = padWithZero(date.getHours(), 2);
+  var minute = padWithZero(date.getMinutes(), 2);
+  if (date.getHours() >= 12) {
+  	timehalf = 'pm';
+  } else {
+  	timehalf = 'am';
+  }
+  
+  
+  return  day + '-' + month + '-' + year + ' at ' + hour + ':' + minute + timehalf + '.';
+}
+
+function padWithZero(str, minLength) {
+  str = String(str);
+  while (str.length < minLength) {
+    str = '0' + str;
+  }
+  return str;
+}
+
+</script>
+
+</body>
+</html>
