@@ -7,6 +7,7 @@
     --white: #fff;
     --light-grey: #ececed;
     --yellow-contrast: #ff9;
+	--yellow-dark: #ecc800;
 }
 
 /* =========================
@@ -107,10 +108,6 @@ h2 {
     font-weight: 100;              /* thin */
     line-height: 1.05;             /* tight but readable */
 
-    /* Responsive very-large size:
-       roughly ~5 lines of body text on desktop */
-    font-size: clamp(3.5rem, 8vw, 6rem);
-
     margin: 2.5rem 0 1.5rem;
 }
 
@@ -129,7 +126,7 @@ a {
 
 a:hover,
 a:focus {
-    color: var(--yellow-contrast);
+    color: var(--yellow-dark);
 }
 
 .abstract {
