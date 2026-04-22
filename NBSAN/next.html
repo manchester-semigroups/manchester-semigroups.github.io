@@ -18,8 +18,24 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+	
+	
+	<script type="text/javascript" id="MathJax-script" async
+	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+	</script> <!-- loads MathJax -->
+
+	<script>
+    document.addEventListener('click', function(event) {
+        if (!event.target.matches('.abstract-toggle')) return;
+        
+        const abstract = event.target.parentElement.lastElementChild;
+        if (abstract.style.display === 'none') {
+            abstract.style.display = 'block';
+        } else {
+            abstract.style.display = 'none';
+        }
+    });
+	</script> <!-- controls the "abstract" buttons -->
 
     <!-- Header -->
     <header class="site-header">
@@ -66,8 +82,8 @@
             The next meeting will take place in Manchester between 18-19 May, organised by <a href="https://sites.google.com/view/josiahaakre/" target="_new">Josiah Aakre</a>, <a href="https://sites.google.com/view/thomasaird/home/" target="_new">Thomas Aird</a> and <a href="https://personalpages.manchester.ac.uk/staff/marianne.johnson/default.html" target="_new">Marianne Johnson</a>. The speakers will be by Ruiwen Dong, Dmitry Kudryavtsev, Ying-Fen Lin, James Mitchell, Tânia Paulista, Jamie Smith, and Jan Philipp Wächter, and the meeting will also feature a GAP workshop led by James Mitchell with support from Reinis Cirpons.
         </p>
 
-<p> Please register your interest using the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=B8tSwU5hu0qBivA1z6kadw5tYxOqog9AnEymwzTgdVNUQU5GSEo0S09YODczNDIzRFBHTEQxWlBWUy4u" target="_blank">NBSAN registration form</a> by <b>Friday, 1st May</b>.<br>
-Limited resources have been allocated to assist those who require financial support in order to attend. Please request assistance on the <a href="https://forms.office.com/e/va1GWvfcBc" target="_blank">funding assistance form</a> by <b>Tuesday 31st March</b>.
+<p> <b>Please register using the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=B8tSwU5hu0qBivA1z6kadw5tYxOqog9AnEymwzTgdVNUQU5GSEo0S09YODczNDIzRFBHTEQxWlBWUy4u" target="_blank">NBSAN registration form</a> by Friday, 1st May</b>.<br>
+<!--Limited resources have been allocated to assist those who require financial support in order to attend. Please request assistance on the <a href="https://forms.office.com/e/va1GWvfcBc" target="_blank">funding assistance form</a> by <b>Tuesday 31st March</b>.-->
 </p>
 
 <p><b>Monday 18th May</b><br>
@@ -75,95 +91,41 @@ All sessions take place in the Frank Adams rooms on the first floor of the Alan 
 Note: Tea and coffee are provided in the coffee breaks, but lunch and dinner are not provided.<br>
 
 <table>
-  <tr>
-    <td>12:30-13:30: </td>
-    <td>Early arrivers meet for lunch in Alan Turing Building</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>13:30-14:30: </td>
-    <td>James Mitchell, University of St Andrews</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>14:30-15:00: </td>
-    <td>Coffee</td>
-    <td></td>
-  </tr>
-<tr>
-    <td>15:00-16:00: </td>
-    <td>Jamie Smith, University of York</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>16:00-17:00: </td>
-    <td>Tânia Paulista, NOVA University of Lisbon</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>18:30-: </td>
-    <td>Conference dinner</td>
-    <td></td>
-  </tr>
+  <tr><td>12:30-13:30: Early arrivers meet for lunch in Alan Turing Building -<button class="abstract-toggle">information</button>
+   <div class="abstract" style="display: none;"> We will gather on the first floor seated area of the Alan Turing Building. If you would like to join us, please plan to either bring lunch along with you or to pick something up nearby - there is a cafe on the ground floor of the building with a limited offering (sandwiches, soup) and we can recommend several other nearby places for those wishing to purchase something upon arrival.
+</div></td></tr>
+  <tr><td>13:30-14:30: James Mitchell, University of St Andrews</td></tr>
+  <tr><td><EM>Automata theoretic techniques for computation in semigroups</EM>
+( <button class="abstract-toggle">abstract</button> )
+<div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+In this talk I will discuss how certain automata theory techniques can be used for practical computation in semigroups. This will touch on the Todd-Coxeter algorithm(s) for finitely presented semigroups; Stephen's procedure for finitely presented inverse semigroups; and a version of Sims' low-index subgroup algorithm for semigroups. We will discuss applications of these algorithms for computing one-sided and two-sided congruences, and for finding low-degree faithful transformation representations, of finitely presented semigroups. 
+</div></td></tr>
+   <tr><td>14:30-15:00: Coffee</td></tr>
+<tr><td>15:00-16:00: Jamie Smith, University of York</td></tr>
+<tr><td><EM>The Endomorphism Tower Problem</EM>
+( <button class="abstract-toggle">abstract</button> )
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+For any monoid M, we can study the monoid End(M) of endomorphisms of M. We can then construct a sequence (or tower) of endomorphisms by finding End(End(M)), End(End(End(M))) and so on. We discuss part of the endomorphism tower for the symmetric group and look at potential patterns in this sequence. 
+</div></td></tr>
+   <tr><td>16:00-17:00: Tânia Paulista, NOVA University of Lisbon</td></tr>
+   <tr><td><EM>The quest for the clique numbers of commuting graphs of semigroups</EM>
+( <button class="abstract-toggle">abstract</button> )
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+<p>The commuting graph of a finite non-commutative semigroup \(S\) is the simple graph whose vertices are the non-central elements of \(S\) and where two distinct vertices \(x\) and \(y\) are adjacent if and only if \(xy=yx\).</p>
+<p>In this talk we will go on a quest to find the clique numbers of the commuting graphs of (full and partial) transformation semigroups. This epic journey will start with commuting graphs, it will then move on to maximum-order commutative subsemigroups of certain types, with a quick visit to trees of commutative transformation semigroups, and then back to commuting graphs.</p>
+</div></td></tr>
+   <tr><td>18:30-: Conference dinner -<button class="abstract-toggle">information</button>
+   <div class="abstract" style="display: none;"> We have booked a table at <a href="https://homemcr.org/food-and-drink-8jzs" target=_blank>HOME Bar and Kitchen</a>. The restaurant requires us to order in advance, so if you intend to join for dinner: please make sure that you have registered by <b>1st May</b> using the form at the top of this page AND filled out your menu choices using the form circulated to registered participants by <b>8th May</b>.  Keep a record of what you ordered and the total cost (plus service charge) for later.  
+</div></td></tr>
 </table><br>
 <b>Tuesday 19th May</b><br>
 Note: Tea and coffee are provided in the coffee breaks, but lunch and dinner are not provided.
 <table>
-  <tr>
-    <td>09:15-10:15: </td>
-    <td>GAP workshop session 1 (more details below)</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>10:15-10:45: </td>
-    <td>Coffee</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>10:45-11:45: </td>
-    <td>GAP workshop session 2</td>
-    <td></td>
-  </tr>
-<tr>
-    <td>11:45-12:45: </td>
-    <td>Jan Philipp Wächter, University of Manchester</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>12:45-14:15: </td>
-    <td>Lunch</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>14:15-15:15: </td>
-    <td>Ying-Fen Lin, Queen's University Belfast</td>
-    <td></td>
-   <tr>
-    <td>15:15-16:15: </td>
-    <td>Ruiwen Dong, University of Oxford</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>16:15-16:35: </td>
-    <td>Coffee</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>16:35-17:35: </td>
-    <td>Dmitry Kudryavtsev</td>
-    <td></td>
-  </tr>
-   <tr>
-    <td>18:00-: </td>
-    <td>Informal dinner for those able to stay</td>
-    <td></td>
-  </tr>
-</table>
-<br>
-<b>Wednesday 20th May</b><br>
-There are no talks scheduled for this date, however, if you would like to continue talking informally about semigroups before onward travel plans -- let us know!
-</p>
-
+  <tr><td>09:15-10:15: GAP workshop session 1 -<button class="abstract-toggle">information</button>
+   <div class="abstract" style="display: none;">
 <p>
 <b>GAP workshop sessions:</b> The purpose of the sessions is to introduce NBSAN participants to the computational tools stemming from the libsemigroups C++ library <a href="https://libsemigroups.github.io" target="_blank">https://libsemigroups.github.io</a>, and their possible applications to research in semigroup theory.<br><br>
 In preparation for the sessions you'll require a laptop running Mac OS or some variant of linux, with at least one of the following installed:<br>
@@ -176,6 +138,56 @@ In preparation for the sessions you'll require a laptop running Mac OS or some v
 [It may be possible to use GAP and the other languages mentioned above on Windows, but none of the developers of the software being discussed use Windows, or have much experience of using Windows, and so the assistance we'll be able to offer is limited].<br><br>
 If you'd like to contribute code or issues, then please make sure you have a GitHub account (they are free).
 </p>
+</div></td></tr>
+  <tr><td>10:15-10:45: Coffee</td></tr>
+  <tr><td>10:45-11:45: GAP workshop session 2</td></tr>
+  <tr><td>11:45-12:45: Jan Philipp Wächter, University of Manchester</td></tr>
+  <tr><td><EM>Context-Free Graphs in Inverse Semigroup Theory</EM>
+( <button class="abstract-toggle">abstract</button> )
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+<p>Context-free graphs were introduced by Muller and Schupp and have been seminal for their celebrated result that virtually free groups are precisely those with context-free word problem. An equivalent characterization for these groups is that their Cayley graph is context-free and these graphs are, in turn, essentially characterized by having a decidable monadic second-order theory, which constitutes a strong decidability result and allows us to answer many questions on a single graph.</p>
+
+<p>In inverse semigroup theory, context-free graphs also appear naturally. For example, any Schützenberger graph of a finitely presented inverse monoid will always be context-free if it is tree-like (in the sense of being quasi-isometric to a tree) due to a result by Gray, Silva and Szakács but tree-like parts can also appear in more general Schützenberger graphs. The difference to the group case is, of course, that we are not dealing with a single Cayley graph but with multiple Schützenberger graphs. Accordingly, interesting decision problems now also involve more than one context-free graph.</p>
+
+<p>We will look at this setting from a semigroup-theoretic perspective and discuss some recent results in the area.</p>
+
+</div></td></tr>
+  <tr><td>12:45-14:15: Lunch <button class="abstract-toggle">information</button>
+   <div class="abstract" style="display: none;"> There are several options nearby that we can recommend.
+</div></td></tr>
+  <tr><td>14:15-15:15: Ying-Fen Lin, Queen's University Belfast</td>
+  <tr><td><EM>Cartan semigroups</EM>
+( <button class="abstract-toggle">abstract</button> )
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Given a \(C^*\)-algebra \(A\), we define a Cartan semigroup in \(A\) which gives rise to an abelian subalgebra \(B\) of \(A\). We can then construct twisted Hausdorff etale groupoids which recover the original \(C^*\)-algebra \(A\) and the abelian subalgebra \(B\). Our result generalises Kumjian-Renault theory in Cartan pairs of \(C^*\)-algebras. In my talk, I will introduce Cartan semigroups, their properties and show how those twisted Hausdorff etale groupoids are constructed. This is based on a joint work with Tristan Bice, Lisa Orloff Clark, and Kathryn McCormick.
+</div></td></tr>
+  <tr><td>15:15-16:15: Ruiwen Dong, University of Oxford</td></tr>
+  <tr><td><EM>Submonoid Membership, finite extensions, and lamplighter groups</EM>
+( <button class="abstract-toggle">abstract</button> )
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The Submonoid Membership problem in a group \(G\) asks, given a finitely generated submonoid \(M\) of \(G\) and an element \(g\) of \(G\), whether \(g\) is contained in \(M\). In many decision problems in infinite groups (such as Subgroup Membership and Rational Subset Membership), decidability is preserved under finite extensions of the group \(G\). In contrast, decidability of Submonoid Membership in \(G\) is not known to imply its decidability in finite extensions of \(G\). In fact, in this talk we will give the first counterexample: we construct \(G\) as a quotient of the 7-dimensional lamplighter group, so that Submonoid Membership is decidable in \(G\) but undecidable in a finite extension of \(G\). We will show decidability of Submonoid Membership in \(G\) by reducing it to solving ''\(S\)-unit equations'' over rings of prime characteristic. We extend Derksen's idea of showing effective \(p\)-automaticity of the solution sets. If time allows, I will discuss some extension to our approach and how it may allow us to encode linear-exponential Diophantine equations in Submonoid Membership of lamplighter groups. (Based on joint work with Doron Shafrir)
+</div></td></tr>
+  <tr><td>16:15-16:35: Coffee</td></tr>
+  <tr><td>16:35-17:35: Dmitry Kudryavtsev</td></tr>
+  <tr><td><EM>Fracturing infinity: local embeddability</EM>
+( <button class="abstract-toggle">abstract</button> )
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+In this talk I will present key concepts and results related to local embeddability into finite semigroups as developed over the recent years. The foundational idea behind this algebraic notion is the completion of a partial structure, for example a finite subset of an infinite semigroup, into a full structure. We will discuss various factors affecting the possibility of such completion, including connections to important semigroup properties such as being inverse, J-trivial, completely regular, etc. We will also conduct an overview of related finitary properties and generalisations, including the well-established ideas of residual finiteness and soficity as well as novel more specific constructions. Finally, a list of possible future research topics and open problems will be provided.
+</div></td></tr>
+  <tr><td>18:00-: Informal dinner for those able to stay <button class="abstract-toggle">information</button>
+   <div class="abstract" style="display: none;"> There is no official plan for this evening, but if you would like to join us for an informal dinner in Manchester before your onward travel, let us know.
+</div></td></tr>
+</table>
+<br>
+<b>Wednesday 20th May</b><br>
+There are no talks scheduled for this date, however, if you would like to continue talking informally about semigroups before onward travel plans -- let us know!
+</p>
+
+
 
 		<P>To receive announcements about future NBSAN meetings, please email
 		<A HREF="http://personalpages.manchester.ac.uk/staff/Mark.Kambites/contact.php">Mark Kambites</A> and request to be added to the 
