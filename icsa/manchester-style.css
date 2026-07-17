@@ -171,10 +171,16 @@ p.lead {
     font-weight: 400;
 }
 
-p.p-bord{border: 2px solid var(--purple-dark); padding: 1em;}
+p.p-bord{border: 2px solid var(--purple-dark); padding: 1em; text-align: center}
 
 purb {
   color: var(--purple-light);
   font-weight: bold;
+}
+
+.thumb {
+  width: 220px;
+  height: 220px;
+  padding: 10px;
 }
 
