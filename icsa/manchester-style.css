@@ -151,7 +151,7 @@ a:focus {
 /* Hover / focus */
 .abstract-toggle:hover,
 .abstract-toggle:focus {
-    color: var(--white);
+    color: var(--yellow-dark);
     background: none;
     outline: none;
 }
