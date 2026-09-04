@@ -18,6 +18,42 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="manchester-style.css">
+
+	<script>
+	window.MathJax = {
+	  tex: {
+	    inlineMath: [['\\(', '\\)']],
+	    displayMath: [['\\[', '\\]']],
+	    macros: {
+	      mx: ['{#1}^{\\mathfrak{m}}', 1]
+	    }
+	  },
+	  options: {
+	    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+	  }
+	};
+	</script> <!-- MathJax configuration: inline maths is written \( ... \) -->
+
+	<script type="text/javascript" id="MathJax-script" async
+	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+	</script> <!-- loads MathJax -->
+
+	<script>
+    document.addEventListener('click', function(event) {
+        if (!event.target.matches('.abstract-toggle')) return;
+        
+        const abstract = event.target.parentElement.lastElementChild;
+        if (abstract.style.display === 'none') {
+            abstract.style.display = 'block';
+            // Re-typeset in case the maths was hidden when MathJax first ran.
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise([abstract]);
+            }
+        } else {
+            abstract.style.display = 'none';
+        }
+    });
+	</script> <!-- controls the "abstract" buttons -->
 </head>
 <body>
 
@@ -43,7 +79,7 @@ International Conference on Semigroups and Applications</h1>
 </li><li class="nav-item"><a class="nav-link" href="https://manchester-semigroups.github.io/icsa/icsa-speakers.html"> Plenary Speakers </a></li><li>-
 </li><li class="nav-item"><a class="nav-link active" href="https://manchester-semigroups.github.io/icsa/icsa-programme.html"> Programme </a></li><li>-
 </li><li class="nav-item"><a class="nav-link" href="https://manchester-semigroups.github.io/icsa/icsa-registration.html"> Registration </a></li><li>-
-</li><li class="nav-item"><a class="nav-link" href="https://manchester-semigroups.github.io/icsa/icsa-travel.html"> Travel & Accommodation </a></li>-
+</li><li class="nav-item"><a class="nav-link" href="https://manchester-semigroups.github.io/icsa/icsa-travel.html"> Travel &amp; Accommodation </a></li>-
 <li class="nav-item"><a class="nav-link" href="https://manchester-semigroups.github.io/icsa/icsa-contact.html"> Contact </a></li>
                 </ul>
             </div>
@@ -52,52 +88,480 @@ International Conference on Semigroups and Applications</h1>
 
     <!-- Main Content -->
     <main class="container my-5">
-	
+  	
 	<div class="row">	
-			<div class="col-lg-8 mx-auto">	
-			<p class="lead">The schedule will appear here. </p>
-<p>To help participants with their travel plans: the meeting will begin at 1pm on afternoon of Monday 14th September, and finish at mid-day on Friday 18th September.</p>
-<!--
-<p class="p-bord">
-<b>Monday 14th September</b><br>
-13:00-18:00 Scientific programme
-<br></p> 
-
-<br>
-
-<p class = "p-bord">
-<b>Tuesday 15th September</b><br>
-09:00-12:30 Scientific programme<br>
-12:30-14:00 Lunch<br>
-14:00-17:00 Scientific programme
-<br></p>
-
-<br>
-
-<p class = "p-bord">
-<b>Wednesday 16th September</b><br>
-09:00-12:30 Scientific programme<br>
-12:30-14:00 Lunch<br>
-14:00-17:00 Scientific programme
-<br></p>
-
-<br>
-<p class = "p-bord">
-<b>Thursday 17th September</b><br>
-09:00-12:30 Scientific programme<br>
-12:30-14:00 Lunch<br>
-14:00-17:00 Scientific programme<br>
-Conference dinner
-<br></p>
+		<div class="col-lg-8 mx-auto">	
+			<p class="lead">
+<H2>Provisional Programme</H2>
+        </p>
+		
+<p>
+The conference begins on Monday 14th September: registration is from 12:00, the first talk is at 13:00 and a pizza reception will
+	take place after the last talk (16:15-18:00). Please note that <STRONG>lunch is not provided on the Monday</STRONG>.<br>
+The conference ends at 12:30 on Friday 18th September, with the final talk scheduled 11:30-12:25.<br><br>
+All invited talks are 50 minutes duration + 5 minutes of questions + 5 minutes for change-over.<br> 
+All short talks are 25 minutes duration to include questions + 5 minutes for change-over.<br>
+</p>
 
 
-<br>
-<p class = "p-bord">
-<b>Friday 18th September</b><br>
-09:00-12:30 Scientific programme<br>
-12:30 Close<br>
-<br></p>
--->
+<p>All talks are located in Lecture Theatre G.54 in the Chemistry Building, the coffee breaks are in the foyer of the Roscoe Building, and the lunches in the Alan Turing Building. <STRONG>Click
+<a href="https://www.google.com/maps/d/edit?mid=1IZuc8uMycA2FpngG8QUD0abrfehAk7g&usp=sharing">here</a> to see a map of conference locations</STRONG> (and some restaurant recommendations).</p>
+
+<p>Click for a downloadable <a href="icsa-timetable.pdf">timetable</a> and <a href="icsa-abstracts.pdf">abstract booklet</a>.</p>
+
+</div>
+</div>
+
+
+<hr class="hline">
+<div class="row">
+<div class="col-lg-4 vcenter" style="text-align:center">
+<h3 class="w-100 text-center">Monday 14th</h3></div>
+<div class="col-lg-8 mx-auto">
+<P>Registration takes place from 12:00 in the Roscoe building.<br>
+
+<p>
+<UL>
+<LI>12:00 Registration (Roscoe Building foyer; tea and coffee will be available from 12:30)</LI>
+<LI>12:55 Welcome  (Chemistry G.54)</LI>
+<LI>13:00 <STRONG>Nik Ru&#353;kuc</STRONG> (University of St Andrews) &ndash; <EM>Groups arising from idempotent structure</EM> 
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Joint work, and underlying friendship, with Vicky Gould have been one of the aspects of my academic journey that I value most. Among the diverse topics that the two of us have shared, the one in this talk is unique in that we have spent a lot of time talking about it but never actually worked together. In this talk I will try to continue this conversation, have our mutual mathematical friends join in, and extend the invitation to anyone else who is interested. The objects in focus are the so-called free idempotent generated semigroups, which arise from abstracting the essential structure of idempotents (e.g. via biordered sets), together with their counterparts in regular \(*\)-semigroups, the free projection-generated semigroups. In each case, the properties and structure of these free objects are to a large extent, but not entirely, governed by their maximal subgroups, and the question arises to investigate this relationship. I will try to present the background in non-technical terms, and then concentrate on some recent results, obtained jointly with East, Gray and Mohammed, which put the two types of free objects side by side for comparison and contrast, both in general terms, and also in the special case of partition and other diagram monoids. I will conclude with open problems which to my mind are most important or promising to address, and hope that Vicky and I will get to work on some of them in the days to come.
+</div>
+</LI>
+<LI>14:00 <STRONG>Alex Levine</STRONG> (University of East Anglia) &ndash; <EM>Commutative decompositions of (partial) transformation monoids</EM> 
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The commutative submonoid width of a monoid \(M\) is the smallest \(k\) such that \(M\) is a product of \(k\) commutative submonoids. We discuss the commutative submonoid width of the symmetric group, the full transformation monoid, the partial transformation monoid and the symmetric inverse monoid, using topological methods to find lower bounds and explicit submonoids to provide upper bounds. Based on joint work with Luna Elliott.
+</div>
+</LI>
+</UL><UL>
+<LI>14:30 Comfort break</LI>
+</UL><UL>
+<LI>14:45 <STRONG>Michael Kinyon</STRONG> (University of Denver) &ndash; <EM>Quasivarieties of regular \(*\)-semigroups</EM> 
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+A <em>regular</em> \(*\)-<em>semigroup</em> is a regular semigroup with an inversion map \(x\mapsto x^*\) which is an involutory antiautomorphism, that is, \((x^*)^* = x\) and \((xy)^* = y^* x^*\). Examples include inverse semigroups, but there are other natural examples as well, such as partition monoids and other diagram monoids.
+<br><br>
+Idempotents of the form \(xx^*\) or \(y^*y\) in a regular \(*\)-semigroup \(S\) are called <em>projections</em> and the set \(P(S)\) of all projections carries a lot of information about the structure of \(S\). Many (quasi)varieties of regular \(*\)-semigroups can be described in terms of projections. For example, Nordahl and Scheiblich showed that a regular \(*\)-semigroup is orthodox if and only if it satisfies the projection identity \((pqr)^2 = pqr\) for all \(p,q,r\in P(S)\).
+<br><br>
+In this talk, after a brief general overview, I will describe a couple of interesting quasivarieties of regular \(*\)-semigroups. The first is the variety of locally inverse \(*\)-semigroups, which has a nice (and apparently, new) characterization in terms of projections. The second, currently nameless quasivariety is more interesting, and is motivated by an attempt to find a description and representation theorem for the class of regular \(*\)-semigroups in which partition monoids live.
+<br><br>
+This is joint work with James East, Matthias Fresacher, Victoria Gould, P. A. Azeef Muhammed, Timothy Stokes, and Abdullahi Umar.
+</div>
+</LI>
+<LI>15:15 <STRONG>Christopher Hollings</STRONG> (University of Oxford) &ndash; <EM>Beyond semigroups: the mathematical life of A. K. Sushkevich</EM> 
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+In this talk, I will outline the wider work and biography of a figure whose name, but perhaps not much else about him, is well known to semigroup theorists: A. K. Sushkevich. Beginning with a discussion of his studies in Berlin at the start of the twentieth century, I will then describe the academic career that he built in Soviet Ukraine. As well as summarising his work (on semigroups) as a research mathematician, I will also consider his mathematical teaching, with a focus on how he taught group theory.
+</div>
+</LI>
+<LI>16:15 Pizza reception for registered participants (First floor, Alan Turing Building)</LI> 
+<LI>18:00 Close</LI>
+
+</UL></P>
+
+
+</div>
+</div>
+
+<hr class="hline">
+<div class="row">
+<div class="col-lg-4 vcenter" style="text-align:center">
+<h3 class="w-100 text-center">Tuesday 15th</h3></div>
+<div class="col-lg-8 mx-auto">
+<P>
+
+<UL>
+<LI>09:00 <STRONG>Tom Aird</STRONG> (University of Manchester) &ndash; <EM>Maximal subgroups of tropical matrix monoids</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The set of \(n\)-by-\(n\) matrices over the tropical semiring, under matrix multiplication, forms a monoid with many interesting algebraic and combinatorial properties. In this talk, we investigate the maximal subgroups of these tropical matrix monoids.
+<br><br>
+Unlike the classical case over a field, tropical matrices have much weaker notions of rank, giving rise to an intricate lattice of \(\mathcal{J}\)-classes determined by the row and column spaces of the underlying matrices. I will begin with an introduction to tropical matrices, tropical modules, and the Green's relations of the monoid, before describing how the maximal subgroups can be identified: they arise as automorphism groups of associated combinatorial structures. I will then present a full classification of the maximal subgroups of the monoid of \(n\)-by-\(n\) tropical matrices, comparing our results to related work in the literature. Finally, I will discuss how these results extend to Sch&uuml;tzenberger groups and to the category of non-square matrices.
+</div>
+</LI>
+<LI>10:00 <STRONG>James East</STRONG> (Western Sydney University) &ndash; <EM>Matrix representations of diagram monoids and categories</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The partition monoid \(P_n\) is an important algebraic object that arises in many parts of mathematics and science. It contains well known submonoids such as the Brauer monoid \(B_n\) and the Temperley&ndash;Lieb monoid \(TL_n\). We show that \(P_n\) has a faithful \(2^n\)-dimensional representation by zero-one matrices over any additively-idempotent semiring. In the case of the Boolean semiring, this is equivalent to a representation by binary relations. The restrictions to \(B_n\) and \(TL_n\) contain faithful sub-representations of lower dimension; for \(TL_n\) the dimension is the \(n\)th Fibonacci number. Interpreting the zero-one matrices instead over a ring of characteristic \(0\) or an appropriate power of \(2\), one obtains faithful representations of the (finite or infinite) twisted versions of these monoids. In fact, all of the above can be formulated in the context of diagram/matrix categories, reflecting several other structures such as natural orders and tensor operations. This is all joint work with Marianne Johnson and Mark Kambites (University of Manchester).
+</div>
+</LI>
+</UL>
+<UL>
+<LI>10:30 Coffee (Roscoe Building foyer)</LI>
+</UL>
+<UL>
+<LI>11:00 <STRONG>Gemma Crowe</STRONG> (University of Manchester) &ndash; <EM>Simultaneous conjugacy in Thompson's group V</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The simultaneous conjugacy problem asks if given a pair of tuples \((g_{1}, \dots, g_{n}), (h_{1}, \dots, h_{n}) \in G^n\) where \(G\) is a group, does there exist a conjugator \(x \in G\) such that \((g_{i})^x = h_{i}\) for all \(1 \leq i \leq n\). In this talk, we discuss a soon to be released arXiv paper which shows this decision problem is solvable in Thompson's group V. Based on joint work with Luna Elliott.
+</div>
+</LI>
+<LI>11:30 <STRONG>Naftoli Kolodny</STRONG> (Binghamton University) &ndash; <EM>The Thompson partition monoid and finitely presented J&oacute;nsson-Tarski algebras</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The Thompson groups \(T \leq V\) were introduced by R. Thompson in the 1960s as the first known finitely presented infinite simple groups. The group \(V\) may be regarded, in some sense, as an infinite analogue of the finite symmetric groups. Analogues of \(V\) have also been developed for the full transformation monoids, symmetric inverse monoids, and partial transformation monoids; in each case, these structures are finitely presented, infinite, and have no proper quotients. In this talk, we introduce a partition monoid analogue \(PV\) of \(V\). One of the many ways of defining \(V\) is as the automorphism group of the free J&oacute;nsson-Tarski algebra, and in this spirit, elements of \(PV\) correspond to isomorphisms between finitely generated subalgebras of finitely presented J&oacute;nsson-Tarski algebras. We show that \(PV\) is finitely generated but does have proper quotients. We solve the word problem by representing elements as finite machines and give diagrammatic representations of elements analogous to those for partition monoids. We then describe the Green's relations, as well as proving their decidability. In the course of this work, we also develop new results on finitely presented J&oacute;nsson-Tarski algebras, including solutions to the word problem, the isomorphism problem, and the subalgebra membership problem.
+</div>
+</LI>
+<LI>12:00 <STRONG>Jamie Smith</STRONG> (University of York) &ndash; <EM>Endomorphism monoids of transformation and partition monoids</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+We describe the structure of the endomorphism monoids of various monoids of transformations and partitions. There are various well known structural similarities and embeddings between these monoids. We show how the similarities between two of these monoids \(S\) and \(T\) disappear, modify, or lift to \(\mathrm{End}(S)\) and \(\mathrm{End}(T)\).
+</div>
+</LI>
+</UL><UL>
+<LI>12:30 Lunch (First floor, Alan Turing Building)</LI>
+</UL><UL>
+<LI>14:00 <STRONG>Yayi Zhu</STRONG> (University of St Andrews) &ndash; <EM>Presentations for the wreath product \(G \wr T_n\) and its ideals</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+For a group \(G\), the wreath product \(G \wr \mathcal{T}_n\) is isomorphic to the endomorphism monoid of a free \(G\)-act. The elements are of the form \((g_\alpha, \alpha)\), where \(g_\alpha\) is an \(n\)-tuple of group elements, and \(\alpha\) is a transformation. The transformation component preserves the structure of the \(\mathcal{J}\)-classes. The chain of \(\mathcal{J}\)-classes of \(\mathcal{T}_n\) is \(J_1 \lt \dots \lt J_n\), where \(J_i\) consists of transformations of rank \(i\). The \(\mathcal{J}\)-classes of \(G \wr \mathcal{T}_n\) are of the form \(\mathcal{J}_i=\{(g_\alpha, \alpha): \text{rank}(\alpha)=i\}\), and they also form a chain. Furthermore, the ideals of \(\mathcal{T}_n\) are of the form \(I_m=\{\alpha:\text{rank}(\alpha)\leq m\}\), and the ideals of \(G \wr \mathcal{T}_n\) are \(G \wr I_m\).
+<br><br>
+Existing work has established presentations for wreath products of monoids, and the singular wreath product \(G \wr (\mathcal{T}_n\setminus\mathcal{S}_n)\), but presentations for a general ideal of \(G \wr \mathcal{T}_n\) are not known.
+<br><br>
+In this talk, I will present results on the relational depth of the ideals \(G \wr I_m\) of \(G \wr \mathcal{T}_n\), which determines the minimal \(\mathcal{J}\)-class whose elements must be contained in any presentation for \(G \wr I_m\). The proof is based on analysing Cayley table presentations for the ideals of \(\mathcal{T}_n\).
+</div>
+</LI>
+<LI>14:30 <STRONG>Levent Michael Dasar</STRONG> (University of York) &ndash; <EM>Chain conditions on Green's posets</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Let \(S\) be a semigroup. The partition of an \(S\)-act by its \(\mathcal{R}\) or \(\mathcal{J}\)-relation can be naturally equipped with a partial ordering. We begin by examining what can be said about chain conditions on these posets from an order-theoretic perspective, before giving exact conditions for the preservation of chain conditions under direct products.
+</div>
+</LI>
+<LI>15:00 <STRONG>Matthias Fresacher</STRONG> &ndash; <EM>Categorical representation of DRC-semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+DRC-semigroups model associative systems with domain and range operations, and contain many important classes, such as inverse, restriction, Ehresmann, regular \(*\)-, and \(*\)-regular semigroups. In this joint work with James East, Azeef Muhammed and Tim Stokes, we show that the category of DRC-semigroups is isomorphic to a category of certain biordered categories whose object sets are projection algebras in the sense of Jones. This extends the recent groupoid approach to regular \(*\)-semigroups of East and Muhammed. We also establish the existence of free DRC-semigroups by constructing a left adjoint to the forgetful functor into the category of projection algebras.
+</div>
+</LI>
+</UL><UL>
+<LI>15:30 Coffee (Roscoe Building foyer)</LI></UL><UL>
+<LI>16:00 <STRONG>Xia Zhang</STRONG> (South China Normal University) &ndash; <EM>On reflections of partially ordered semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Embedding a mathematical structure into another structure with better properties is a general and much used idea. Often what we call the &ldquo;better&rdquo; structure is the completion of the initial one. Completions of ordered structures have been extensively studied. A nice completion usually defines a reflection arrow in a proper category, so the completion can be seen as a solution of a universal problem. In this talk, reflections of partially ordered semigroups induced by injective hulls, ideals and cuts are presented successively. Meanwhile, the corresponding full reflective subcategories are obtained.
+</div>
+</LI>
+<LI>16:30 <STRONG>Ant&oacute;nio Malheiro</STRONG> (NOVA University of Lisbon) &ndash; <EM>TBC</EM>  
+</LI>
+</UL></P>
+
+
+</div>
+</div>
+
+<hr class="hline">
+<div class="row">
+<div class="col-lg-4 vcenter" style="text-align:center">
+<h3 class="w-100 text-center">Wednesday 16th</h3></div>
+<div class="col-lg-8 mx-auto">
+<P>
+
+
+<UL>
+<LI>09:00 <STRONG>Craig Miller</STRONG> (Durham University) &ndash; <EM>Right noetherian semigroups and finite generation</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+A semigroup is said to be right noetherian if all its right congruences are finitely generated. In this talk, we examine the fundamental open problem of whether every right noetherian semigroup must be finitely generated. In particular, we discuss recent developments in the case of cancellative semigroups.
+</div>
+</LI>
+<LI>10:00 <STRONG>Jan Philipp W&auml;chter</STRONG> (University of Manchester) &ndash; <EM>Inverse semigroups and the isomorphism problem for context-free trees</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Context-free graphs were introduced by Muller and Schupp and appear in group theory as the Cayley graphs of context-free (or, equivalently, virtually free) groups. We will motivate in the talk that context-free graphs are tree-like graphs (i.e. quasi-isometric to a tree) with a certain &ldquo;regularity condition&rdquo;. In fact, this is reflected in a result due to Gray, Silva and Szak&aacute;cs stating that tree-like Sch&uuml;tzenberger graphs of inverse semigroups are context-free if the inverse semigroup is finitely presented. More generally, tree-like (and, thus, context-free in the finitely presented case) parts may also appear in more general Sch&uuml;tzenberger graphs.
+<br><br>
+It is the main idea of geometric inverse semigroup theory that algebraic questions often boil down to graph-theoretic questions on the Sch&uuml;tzenberger graphs. For example, checking the \(\mathcal{D}\)- or \(\mathcal{J}\)-equivalence of two elements is equivalent to checking whether their Sch&uuml;tzenberger graphs are isomorphic as non-rooted graphs and whether there are mutual non-rooted homomorphisms between them, respectively. This underlines the need for algorithms for context-free graphs. As such an algorithm, we will discuss how context-free trees can be represented using finite automata and how they can be checked for isomorphism in this representation.
+</div>
+</LI></UL><UL>
+<LI>10:30 Coffee (Roscoe Building foyer)</LI></UL><UL>
+<LI>11:00 <STRONG>Reinis Cirpons</STRONG> (Nantes Universit&eacute;, INRIA) &ndash; <EM>Extensions of the Todd-Coxeter algorithm via automata theory</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The well known Todd-Coxeter algorithm is widely used to construct transformation representations of finitely presented monoids. It can be seen, in some sense, as computing the direct limit of a sequence of semiautomata approximating the right Cayley graph of the underlying monoid. This algorithm can also be used for finitely presented groups and, perhaps more surprisingly, there exists an analogue of the Todd-Coxeter algorithm for inverse monoids due to J. B. Stephen (1987). This is despite the fact that the free inverse monoid is not finitely presented as a monoid. Could it be possible to extend the Todd-Coxeter algorithm to other classes of monoids, such as finitely based varieties of monoids?
+<br><br>
+In this talk I will briefly describe a category theory based approach to modeling the Todd-Coxeter algorithm and I will present an extension of the Todd-Coxeter algorithm to presentations in finitely based varieties of monoids, motivated by a recent NL-space algorithm for deciding if a monoid identity is modelled by a given finitely generated transformation monoid due to L. Fleischer and T. Jack (2020).
+</div>
+</LI>
+<LI>11:30 <STRONG>Florian Stober</STRONG> (University of Stuttgart) &ndash; <EM>The state of membership in semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The membership problem for an algebraic structure asks whether a given element lies in the substructure generated by a given set of elements. For finite semigroups it is PSPACE-complete in the transformation model (Kozen 1977) and NL-complete in the Cayley table model (Jones, Lien, and Laaser 1976). These worst-case bounds hide a lot of structure, though: for restricted classes the problem is often far easier &mdash; for semilattices, for instance, it is in \(\mathrm{AC}^0\) in both models.
+<br><br>
+Parametrizing the problem by varieties of semigroups is a standard approach to obtain a more nuanced classification of the complexity. This approach has been successfully applied to aperiodic monoids in the transformation model (Beaudry, McKenzie, and Th&eacute;rien 1992) as well as inverse semigroups in the Cayley table model and the partial bijection model (Fleischer, Stober, Thumm, and Wei&szlig; 2025). However, the landscape of varieties of finite semigroups is much richer than that of aperiodic monoids or inverse semigroups. New varieties appear that have no monoid or inverse semigroup counterpart. This talk surveys which results do transfer, and which gaps between upper and lower bounds remain. Furthermore, we explore the implications of new results on compression in semigroups (Thumm and Wei&szlig; 2026) for the membership problem.
+</div>
+</LI>
+<LI>12:00 <STRONG>Catherine Reilly</STRONG> (University of East Anglia) &ndash; <EM>One-relator inverse monoids with decidable word problem are algorithmically unclassifiable</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+A classical result in combinatorial group theory, the Adian&ndash;Rabin Theorem, states that there does not exist an algorithm that takes a finitely presented group \(G\) and decides whether \(G\) possesses a given Markov property. An example of such a property is having decidable word problem. Consequently, there is no algorithm that takes a finitely presented group and decides whether the group has decidable word problem. On the other hand, Magnus proved in the 1930s that every one-relator group has decidable word problem, so in the one-relator case such an algorithm (trivially) does exist.
+<br><br>
+In contrast, Gray proved in 2019 that there exists a one-relator inverse monoid with undecidable word problem. A natural question arising from that work is whether it is possible to classify the one-relator inverse monoids with decidable word problem. In particular, one can ask whether there is an algorithm that takes a one-relator inverse monoid and decides whether it has decidable word problem.
+<br><br>
+In this talk, I will show that no such algorithm exists. That is, the one-relator inverse monoids with decidable word problem are algorithmically unclassifiable.
+</div>
+</LI></UL><UL>
+<LI>12:30 Lunch (First floor, Alan Turing Building)</LI></UL><UL>
+<LI>14:00 <STRONG>Ajda Lemut Furlani</STRONG> (IMFM Ljubljana and University of Ljubljana) &ndash; <EM>\(F\)-congruences on \(F\)-inverse monoids</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+A congruence on an \(F\)-inverse monoid will be called an \(F\)-congruence if it respects the unary operation \(\mx{}\), which maps an element to the maximum element of its \(\sigma\)-class. It is well known that congruences on inverse semigroups are described by kernel normal systems or, equivalently, by congruence pairs. In the talk I will discuss various results concerning \(F\)-congruences on \(F\)-inverse monoids, including necessary and sufficient conditions for a kernel normal system or a congruence pair associated to an \(F\)-inverse monoid \(S\) to give rise to an \(F\)-congruence on \(S\).
+</div>
+</LI>
+<LI>14:30 <STRONG>Francesco Tesolin</STRONG> (Heriot-Watt University) &ndash; <EM>A Schwarz-Milnor lemma for inverse monoids</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+An &eacute;tale action of an inverse semigroup generalises a group action on a set. The action forces the set to have structure of a presheaf of sets over the idempotents of the inverse semigroup. The geometric theory of inverse semigroups focuses on the Sch&uuml;tzenberger graphs, they are the strongly connected components of the Cayley graph, which are geodesic metric spaces. We observe that the regular action of an inverse semigroup on the Cayley graph is an &eacute;tale action and that the Cayley graph has the structure of a presheaf of geodesic metric spaces over the idempotents. Using this we prove an analogue of Milnor-Schwarz: showing that a presheaf of geodesic metric spaces on which an inverse monoid acts properly and cocompactly is quasi-isometric to the Cayley graph. We propose &eacute;tale actions as a tool for geometric inverse semigroup theory.
+</div>
+</LI>
+<LI>15:00 <STRONG>Daniel Heath</STRONG> &ndash; <EM>Free h-adequate semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+First considered by Fountain in the 1970s, the class of (right) h-adequate semigroups is a subclass of unary semigroups sitting between ample semigroups and Ehresmann semigroups, and form a natural sister class to birestriction semigroups. These classes are widely studied, having featured in work of many authors including Aird, Branco, Fountain, Gomes, Johnson, Kambites, Kudryavtseva, Lemut Furlani, Szak&aacute;cs and, of course, Gould. It appears however that h-adequate semigroups have fallen through the cracks; here we explore this almost &ldquo;forgotten&rdquo; quasivariety. We motivate their study via free adequate semigroups and give a description for the free objects in terms of trees akin to those of Munn for inverse semigroups and Kambites for Ehresmann semigroups.
+</div>
+</LI></UL><UL>
+<LI>15:30 Coffee (Roscoe Building foyer)</LI></UL><UL>
+<LI>16:00 <STRONG>Ganna Kudryavtseva</STRONG> (University of Ljubljana) &ndash; <EM>Proper Ehresmann semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+The talk will present the notion of a proper biEhresmann semigroup which generalizes that of a proper birestriction semigroup. Because of the absence of the ample identities, this notion is unavoidably much more complex than that of a proper birestriction semigroup. Our underlying idea is to extend the presentation of proper birestriction semigroups as partial action products of a semilattice by a monoid.
+<br><br>
+Starting from a semilattice \(E\), a monoid \(T\) and a directed graph \({\mathcal G}\) possessing additional structure that we call compatible restrictions and corestrictions subject to a certain condition, with vertex set \(E\) and edges labelled by elements of \(T\), we construct a biEhresmann semigroup \(E\rtimes_{\mathcal G} T\). This semigroup turns out to be our desired generalization, whence we term so arising biEhresmann semigroups proper.
+<br><br>
+We show that every biEhresmann semigroup possesses a proper cover and, remarkably, whenever \(S\) is a biEhresmann monoid with projections \(P(S)\), the covering monoid \(P(S)\rtimes_{\mathcal G} X^*\) is isomorphic to the monoid \({\mathcal P}(X^*, P(S))\), defined using a different approach, from the work of Branco, Gomes and Gould.
+<br><br>
+This is joint work with Valdis Laan.
+</div>
+</LI><br>
+</UL></P>
+<UL>
+<LI>19:00 Conference dinner</LI>
+</UL>
+
+
+</div>
+</div>
+
+<hr class="hline">
+<div class="row">
+<div class="col-lg-4 vcenter" style="text-align:center">
+<h3 class="w-100 text-center">Thursday 17th</h3></div>
+<div class="col-lg-8 mx-auto">
+<P>
+
+
+<UL>
+<LI>09:00 <STRONG>Jo&atilde;o Ara&uacute;jo</STRONG> (Universidade Nova de Lisboa) &ndash; <EM>Complete mappings for semigroups</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+A complete mapping of a semigroup \(S\) is a bijection \(\alpha\colon S\to S\) such that the map \(\theta\colon S\to S\) defined by \(x\theta=x\cdot x\alpha\) is also a bijection. Complete mappings connect group theory, Latin squares, and cryptography, and their existence for finite groups was characterized by the resolution of the Hall&ndash;Paige conjecture. Here I will develop the corresponding theory for finite semigroups.
+<br><br>
+We prove that every finite semigroup admitting a complete mapping is regular and that the problem reduces to principal factors. We classify the existence of a complete mapping in Rees matrix semigroups without zero, give a Hall-type criterion for Rees \(0\)-matrix semigroups over groups with complete mappings, and prove sufficient conditions for Rees \(0\)-matrix semigroups whose maximal subgroups do not have complete mappings. As the main application of the Rees \(0\)-matrix analysis, we show that \(T_n\) has a complete mapping if and only if the same holds for \(S_n\). The proofs combine Green&ndash;Rees structure theory with the Hall&ndash;Paige theorem and Burnside transfer, the Hall&ndash;Gale&ndash;Edmonds framework for matchings, flows, matroids and polyhedra, Hoffman&ndash;Kruskal total unimodularity and integral polyhedra, K&#337;nig edge-colouring, Bevis&ndash;Hall&ndash;Katz incidence theory over finite abelian groups, and Bregman&ndash;Egorychev&ndash;Falikman permanent estimates.
+</div>
+</LI>
+<LI>10:00 <STRONG>Max Gadouleau</STRONG> (Durham University) &ndash; <EM>Signed graphs and semigroups</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Signed graphs are widely used to model networks where interactions are positive or negative. Formally, signed graphs are graphs where the edges are signed positively or negatively. The sign of a cycle is the product of the signs of its edges; a signed graph is balanced if all cycles are positive. In this talk, we'll look at the natural generalisation when the edge signs are taken from a semigroup. We will see that balancing connects with the concept of inverses, and if time permits we'll classify the varieties of balanced signed graphs.
+</div>
+</LI></UL><UL>
+<LI>10:30 Coffee (Roscoe Building foyer)</LI></UL><UL>
+<LI>11:00 <STRONG>Yakiv Baiduk</STRONG> (Kyiv School of Economics) &ndash; <EM>Transformation semigroup perspective on the magma monoid</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+We study the semigroup structure on the set of binary operations on a fixed set, which we refer to as the magma monoid. Using a new transformation-semigroup framework, we characterize principal left and right ideals, describe Green's relations, idempotent and regular elements in this structure. In addition, we derive explicit combinatorial enumerations for these classes of elements.
+</div>
+</LI>
+<LI>11:30 <STRONG>Yanhui Wang</STRONG> (Shandong University of Science and Technology) &ndash; <EM>Network semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+We introduce the class of network semigroups. These are based on networks that extend the notion of a directed graph. This class properly contains the class of graph inverse semigroups. We investigate the structure of network semigroups. We show that two network semigroups are isomorphic if and only if the underlying networks are isomorphic.
+</div>
+</LI>
+<LI>12:00 <STRONG>Anatolii Zhuchok</STRONG> (University of Potsdam, Germany; Luhansk Taras Shevchenko National University, Poltava, Ukraine) &ndash; <EM>On the structure of trioids</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+One of the important classes of universal algebras, trioids, was introduced by J.-L. Loday and M. O. Ronco in 2004 in the context of algebraic topology [1]. A trioid is an algebraic system consisting of a set with three binary associative operations satisfying certain axioms. Trioids generalize semigroups and play an important role in trialgebra theory. After recalling the definition of a trioid, we present examples of trioids and discuss their connections with other algebraic structures, including Poisson algebras, Leibniz algebras, dialgebras, dimonoids, digroups, and (strict) \(n\)-tuple semigroups. We establish independence of the trioid axioms [2] and construct the free algebra in the variety of trioids [3]. By adapting the decomposition method to trioids, we extend several structural results from semigroup theory to trioids [3]. The main result states that every countable trioid can be embedded into a 2-generated trioid. This generalizes Evans' classical theorem [4], stating that every countable semigroup can be embedded into a 2-generated semigroup.
+<br><br>
+<STRONG>References.</STRONG><br>
+[1] Loday, J.-L., Ronco, M. O.: Trialgebras and families of polytopes, Contemporary Mathematics 346 (2004), 369&ndash;398.<br>
+[2] Zhuchok, A. V.: Independence of axioms of an associative trioid, Semigroup Forum 104 (2022), 760&ndash;765.<br>
+[3] Zhuchok, A. V.: Trioids, Asian-European Journal of Mathematics 8(4) (2015), Article No. 1550089.<br>
+[4] Evans, T.: Embedding theorems for multiplicative systems and projective geometries, Proceedings of the American Mathematical Society 3 (1952), 614&ndash;620.
+</div>
+</LI></UL><UL>
+<LI>12:30 Lunch (First floor, Alan Turing Building)</LI></UL><UL>
+<LI>14:00 <STRONG>Wajih Ashraf</STRONG> (Aligarh Muslim University, India) &ndash; <EM>Applications of Isbell zigzag theorem</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Fennemore, in [7], had described the lattice of all varieties of bands and given its diagram. After that, Petrich [10, Theorem II.5.1] had classified a semigroup identity on bands in at most three variables. Though the varieties of semilattices and left (right) zero semigroups are absolutely closed, the varieties of rectangular bands and right (left) normal bands are not absolutely closed (see Higgins [8, Chapter 4]). Therefore, it is worth finding subvarieties of the variety of all semigroups that are closed in itself or closed and saturated in the containing varieties of semigroups. Encouraged by the fact that Scheiblich [11] had shown that the variety of all normal bands was closed, Alam and Khan in [4&ndash;6] had shown that the varieties of all left [right] regular bands, left [right] quasi-normal bands and left [right] semi-normal bands were closed. In [2], Ahanger and Shah had proved a stronger fact that the variety of all left [right] regular bands was closed in the variety of all bands and left [right] semi-normal bands was saturated in bands. In [3], Ahanger, Nabi and Shah had proved the facts that the variety of all rectangular bands was closed in the variety of all bands, the variety of all regular bands was closed and the variety of generalized left [right] regular semigroups was saturated. Finally in [1], Abbas, Ashraf and Khan extended the work in the same direction and proved that the variety of all rectangular bands is closed in the variety of \(n\)-nilpotent extension of bands and the variety of normal bands was closed in the variety of left [right] semiregular bands. They also provided a simple and shorter proof of closedness of variety of regular bands. The Isbell zigzag theorem, which is a most useful characterization of semigroup dominions provided by Isbell [9], has played the central role in determination of closed and saturated varieties of semigroups. So, in this way we worked on the applications of Isbell Zigzag theorem. In the same direction, some more closed and saturated varieties are determined. However a complete determination of closed and saturated varieties still remains an open problem. For example, are left (right) semiregular bands closed and regular bands saturated? The affirmative answers of these problems will definitely prove that epis are onto for these classes which, in itself, is an important question.
+<br><br>
+<STRONG>References.</STRONG><br>
+[1] Abbas, S., Ashraf, W., Khan, N. M.: Dominions and closed varieties of bands, Hacettepe Journal of Mathematics and Statistics, 53(2) (2024), 382&ndash;391.<br>
+[2] Ahanger, S. A., Shah, A. H.: Epimorphisms, dominions and varieties of bands, Semigroup Forum, 100 (2020), 641&ndash;650.<br>
+[3] Ahanger, S. A., Nabi, M. and Shah, A. H.: Closed and saturated varieties of semigroups, Communications in Algebra, 51(1) (2022), 199&ndash;213.<br>
+[4] Alam, N., Khan, N. M.: Special semigroup amalgams of quasi unitary subsemigroups and of quasi normal bands, Asian European Journal of Mathematics (2013).<br>
+[5] Alam, N., Khan, N. M.: On closed and supersaturated semigroups, Communications in Algebra 42 (2014), 3137&ndash;3146.<br>
+[6] Alam, N., Khan, N. M.: Epimorphism, closed and supersaturated semigroups, Malaysian Journal of Mathematical Sciences 9(3) (2015), 409&ndash;416.<br>
+[7] Fennemore, C.: All varieties of bands, Semigroup Forum 1 (1970), 172&ndash;179.<br>
+[8] Higgins, P. M.: Techniques of Semigroup Theory, Oxford University Press, Oxford (1992).<br>
+[9] Isbell, J. R.: Epimorphisms and dominions, Proceedings of the Conference on Categorical Algebra, La Jolla, (1965), 232&ndash;246.<br>
+[10] Petrich, M.: Lectures in Semigroups. Wiley, New York (1977).<br>
+[11] Scheiblich, H. E.: On epis and dominions of bands, Semigroup Forum 13 (1976), 103&ndash;114.
+</div>
+</LI>
+<LI>14:30 Discussion session: <EM>AI in semigroup theory</EM>  </LI>
+</UL><UL>
+<LI>15:30 Coffee (Roscoe Building foyer)</LI></UL><UL>
+<LI>16:00 <STRONG>Aftab Hussain Shah</STRONG> (Central University of Kashmir, India) &ndash; <EM>Epimorphisms and pseudo varieties of semigroups</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+For each of the following conditions, we characterize the pseudovarieties of semigroups \(V\) that satisfy it:
+(i) every epimorphism to a member of \(V\) is onto;
+(ii) every epimorphism to a finite semigroup with domain a member of \(V\) is onto;
+(iii) for every epimorphism from a semigroup \(S\) into a semigroup \(T\) with \(S\) in \(V\) and \(T\) finite, \(T\) is also a member of \(V\).
+</div>
+</LI>
+<LI>16:30 <STRONG>Carl-Fredrik Nyberg-Brodda</STRONG> (Korea Institute for Advanced Study) &ndash; <EM>Profinite rigidity and finite shadows of infinite objects</EM>  
+
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+When is a finitely generated algebraic object determined by its finite quotients? This is the core question underlying profinite rigidity. I will give an introduction to some of the key ideas behind profinite rigidity, and discuss some recent results concerning the non-rigidity of some groups. In particular, I will show that braid groups are not profinitely rigid, giving the first known examples of profinitely non-rigid mapping class groups. I will also give a brief overview of a recent result that free-by-cyclic groups are not relatively profinitely rigid, which answered a question of Bridson &amp; Reid from 2015. Time permitting I will also discuss what happens in the semigroup setting, especially for free semigroups.
+</div>
+</LI>
+</UL></P>
+
+
+</div>
+</div>
+
+<hr class="hline">
+<div class="row">
+<div class="col-lg-4 vcenter" style="text-align:center">
+<h3 class="w-100 text-center">Friday 18th</h3></div>
+<div class="col-lg-8 mx-auto">
+<P>
+
+<UL>
+<LI>09:00 <STRONG>Robert Gray</STRONG> (University of East Anglia) &ndash; <EM>TBC</EM>  
+</LI>
+<LI>10:00 <STRONG>Valdis Laan</STRONG> (University of Tartu) &ndash; <EM>Enlargements and Morita contexts for semirings</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+Enlargements were introduced by Mark Lawson in 1996 to study the structure of regular semigroups. Later he proved that two semigroups with local units are Morita equivalent if and only if they have a joint enlargement. For semirings, enlargements can be defined in a very similar way: a semiring \(S\) is called an enlargement of its subsemiring \(R\) if \(S=SRS\) and \(R=RSR\). We say that a semiring \(S\) is factorisable if \(S=SS\). For example, a full matrix semiring over a factorisable semiring \(R\) is an enlargement of \(R\).
+<br><br>
+It turns out that two factorisable semirings are connected by a unitary and surjective Morita context if and only if they have a joint enlargement. Thus, enlargements can be used to investigate Morita equivalence of semirings, similarly to the case of semigroups or rings. In particular, with the help of enlargements one can study Morita invariants &mdash; these are properties shared by all semirings in the same Morita equivalence class. It turns out that (von Neumann) regularity is not a Morita invariant for semirings with identity, while it is a Morita invariant for monoids and rings with identity. We will also give some examples of properties that are Morita invariants for semirings.
+</div>
+</LI></UL><UL>
+<LI>10:30 Coffee (Roscoe Building foyer)</LI></UL><UL>
+<LI>11:00 <STRONG>Josiah Aakre</STRONG> (University of Manchester) &ndash; <EM>Katsura-Exel-Pardo groupoids and vanishing of the singular ideal</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+We give the first examples of non-contracting self-similar groupoids for which simplicity of the Steinberg and \(C^*\)-algebras built from the associated ample groupoid is decidable. Katsura-Exel-Pardo (KEP) groupoids find their origin in Katsura's model, built from two integer matrices, which can realize all Kirchberg \(C^*\)-algebras. Exel and Pardo later realised these matrices describe a self-similar action of \(\mathbb{Z}\) on a directed graph. To avoid the potential perils of topological groupoids and norm completions, we choose to navigate the friendlier landscape of inverse semigroup algebras. The main results are achieved by describing the ideal in question in terms of the self-similar action which, in the setting of KEP-groupoids, may be understood quite well even for non-contracting actions.
+</div>
+</LI>
+<LI>11:30 <STRONG>Dandan Yang</STRONG> (Xidian University) &ndash; <EM>Equations, purity and coherency</EM>  
+
+(<button class="abstract-toggle">abstract</button>)
+        <div class="abstract" style="display: none;">
+<STRONG>Abstract.</STRONG>
+In this talk, I will discuss my joint work with Vicky Gould concerning the following long-standing and intriguing problem: when does the guaranteed solvability of every finite consistent system of equations in one variable lift to the guaranteed solvability of every finite consistent system of equations in any finite number of variables? This question has a positive answer for some algebraic structures, such as groups and semigroups, but remains far from fully understood for modules over rings or acts over monoids.
+</div>
+</LI>
+<LI>12:30 Close</LI>
+</UL></P>
+
+
+</div>
+</div>
+
+</div> <!-- End main -->
 
 </div>
 	</div>
@@ -143,8 +607,3 @@ function padWithZero(str, minLength) {
 
 </body>
 </html>
-
-
-
-
-
